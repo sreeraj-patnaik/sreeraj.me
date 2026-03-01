@@ -129,12 +129,12 @@ body {
   background-size: 64px 64px;
   pointer-events: none;
   z-index: -2;
-  animation: gridDrift 30s linear infinite;
+  animation: gridDrift 60s linear infinite;
 }
 
 @keyframes gridDrift {
   0% { transform: translate(0, 0); }
-  100% { transform: translate(2px, 2px); }
+  100% { transform: translate(1px, 1px); }
 }
 
 /* Floating orbs */
@@ -234,11 +234,12 @@ body {
   color: var(--text-primary);
   text-decoration: none;
   letter-spacing: -0.03em;
-  transition: color var(--duration) var(--ease-out);
+  transition: color var(--duration) var(--ease-out), transform var(--duration-fast) var(--ease-out);
 }
 
 .logo:hover {
   color: var(--accent-light);
+  transform: scale(1.02);
 }
 
 .logo span {
@@ -1350,21 +1351,16 @@ body {
   transition: border-color var(--duration) var(--ease-out), box-shadow var(--duration) var(--ease-out);
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: var(--text-muted);
-}
-
-.form-group input,
-.form-group textarea {
-  transition: border-color var(--duration) var(--ease-out), box-shadow var(--duration) var(--ease-out);
-}
-
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-soft), 0 0 20px rgba(99, 102, 241, 0.08);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
 }
 
 .form-group textarea {
