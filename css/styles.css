@@ -296,6 +296,41 @@ body {
   max-width: 680px;
 }
 
+.hero-photo-wrap {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--glass-border);
+  box-shadow: 0 8px 32px var(--glass-shadow), 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-photo-fallback {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent-soft), rgba(139, 92, 246, 0.2));
+  color: var(--accent-light);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-photo-fallback.visible {
+  display: flex;
+}
+
 .hero-subtitle {
   display: block;
   font-size: var(--text-sm);
@@ -342,6 +377,15 @@ body {
   font-weight: 500;
   margin-bottom: 1rem;
   animation: fadeInUp 0.9s var(--ease-out) 0.16s both;
+}
+
+.hero-tagline-ai {
+  color: var(--accent-light);
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--accent-light), var(--gradient-3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-intro {
@@ -542,6 +586,19 @@ body {
   margin-top: 0;
 }
 
+.subsection-title-ai {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-light);
+  margin-bottom: 1rem;
+}
+
+.subsection-title-ai svg {
+  width: 22px;
+  height: 22px;
+}
+
 /* Reveal animation + stagger (delay set via JS from data-delay) */
 [data-reveal] {
   opacity: 0;
@@ -555,12 +612,72 @@ body {
 }
 
 /* ========== About ========== */
+.about-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+  .about-photo-wrap {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+}
+
+.about-photo-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  aspect-ratio: 4/5;
+  background: var(--bg-card);
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-photo-fallback {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: var(--accent-soft);
+  color: var(--accent-light);
+  align-items: center;
+  justify-content: center;
+}
+
+.about-photo-fallback.visible {
+  display: flex;
+}
+
+.about-photo-fallback svg {
+  width: 64px;
+  height: 64px;
+}
+
+.about-text-block {
+  min-width: 0;
+}
+
 .about-summary {
   font-size: var(--text-lg);
   color: var(--text-secondary);
   line-height: 1.8;
-  margin-bottom: 2.5rem;
-  max-width: 720px;
+  margin-bottom: 1.25rem;
+  max-width: none;
+}
+
+.about-summary-secondary {
+  margin-bottom: 2rem;
 }
 
 .about-summary strong {
@@ -569,12 +686,17 @@ body {
 
 .about-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
 }
 
 .about-card {
   text-align: center;
+}
+
+.about-card-ai .card-icon {
+  background: linear-gradient(135deg, var(--accent-soft), rgba(139, 92, 246, 0.2));
+  color: var(--accent-light);
 }
 
 .about-card .card-icon {
@@ -618,6 +740,58 @@ body {
 }
 
 /* ========== Education ========== */
+.education-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .education-layout {
+    grid-template-columns: 1fr;
+  }
+  .education-photo-wrap {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+.education-photo-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  aspect-ratio: 3/4;
+  background: var(--bg-card);
+}
+
+.education-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.education-photo-fallback {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: var(--accent-soft);
+  color: var(--accent-light);
+  align-items: center;
+  justify-content: center;
+}
+
+.education-photo-fallback.visible {
+  display: flex;
+}
+
+.education-photo-fallback svg {
+  width: 56px;
+  height: 56px;
+}
+
 .education-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -674,6 +848,65 @@ body {
 }
 
 /* ========== Projects ========== */
+.projects-ai-highlight {
+  margin-bottom: 2.5rem;
+}
+
+.project-card-hero {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  max-width: 900px;
+}
+
+@media (max-width: 768px) {
+  .project-card-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-hero-image-wrap {
+  position: relative;
+  min-height: 200px;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.project-hero-image {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-hero-image-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-light);
+  opacity: 0.5;
+}
+
+.project-hero-image-placeholder svg {
+  width: 64px;
+  height: 64px;
+}
+
+.project-hero-content {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-badge-ai {
+  background: linear-gradient(135deg, var(--accent-soft), rgba(139, 92, 246, 0.2));
+  color: var(--accent-light);
+}
+
 .projects-featured {
   margin-bottom: 2rem;
 }
@@ -879,6 +1112,20 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.25rem;
+}
+
+.skills-grid-wide {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.skills-category-ai .skills-category-icon {
+  background: linear-gradient(135deg, var(--accent-soft), rgba(139, 92, 246, 0.25));
+  color: var(--accent-light);
+}
+
+.skills-category-ai:hover {
+  box-shadow: 0 12px 40px var(--glass-shadow), 0 0 32px var(--accent-glow);
 }
 
 .skills-category {

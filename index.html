@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sreeraj Dabbiru | Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Sreeraj Dabbiru — BTech Computer Science Student & Developer. Backend systems, data-driven software, Python, Django, AI.">
+    <meta name="description" content="Portfolio of Sreeraj Dabbiru — BTech CS Student & Developer. Generative AI, Agentic AI, backend systems, Python, Django. Building intelligent software.">
     
     <!-- Google Fonts: Syne (display) + Inter (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,14 +50,18 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="container hero-content">
+            <div class="hero-photo-wrap" data-reveal>
+                <img src="assets/images/avatar.jpg" alt="Sreeraj Dabbiru" class="hero-photo" onerror="this.style.display='none'; var f=this.nextElementSibling; if(f) f.classList.add('visible');">
+                <div class="hero-photo-fallback" aria-hidden="true">SD</div>
+            </div>
             <span class="hero-subtitle"><span class="hero-greeting-line"></span>Hello, I'm</span>
             <h1 class="hero-title">
                 <span class="hero-name">Sreeraj Dabbiru</span>
             </h1>
-            <p class="hero-tagline">BTech Computer Science Student · Developer</p>
+            <p class="hero-tagline">BTech Computer Science · Developer · <span class="hero-tagline-ai">Generative & Agentic AI</span></p>
             <p class="hero-intro">
-                Computer Science undergraduate focused on <strong>backend systems</strong>, <strong>data-driven software</strong>, and applied problem solving. 
-                Building reliable software with Python, web technologies, and a growing interest in ML and systems. 
+                Building <strong>intelligent software</strong> with <strong>Generative AI</strong> and <strong>Agentic AI</strong> — from natural-language SQL agents and AI-assisted systems to reliable backends and data pipelines. 
+                Focus on integration, interpretability, and systems that scale. 
                 <span class="hero-meta">Vice-Chairperson, ACM Student Chapter · Editor-in-Chief, LWC · LIET ’28</span>
             </p>
             <div class="hero-buttons">
@@ -89,48 +93,57 @@
         <div class="container">
             <h2 class="section-title" data-reveal>About Me</h2>
             <div class="about-wrapper" data-reveal data-delay="100">
-                <p class="about-summary">
-                    Second-year <strong>Computer Science and Systems Engineering</strong> undergraduate at Lendi Institute of Engineering and Technology (LIET), maintaining a <strong>9.5 GPA</strong>. 
-                    I focus on building reliable, maintainable software — from data models and workflows to backend systems and analytical tooling. 
-                    I value clarity in both code and communication, and enjoy mentoring and explaining systems honestly. 
-                    Interested in machine learning as a tool for integration and interpretability, and in operating systems and compiler internals long-term.
-                </p>
-                <div class="about-cards">
-                    <div class="glass-card about-card" data-reveal data-delay="150">
-                        <div class="card-icon">
-                            <i data-lucide="code"></i>
-                        </div>
-                        <h3>Programming</h3>
-                        <ul>
-                            <li>C</li>
-                            <li>Python</li>
-                            <li>Java</li>
-                            <li>JavaScript</li>
-                        </ul>
+                <div class="about-layout">
+                    <div class="about-photo-wrap">
+                        <img src="assets/images/about.jpg" alt="Sreeraj Dabbiru" class="about-photo" onerror="this.style.display='none'; this.nextElementSibling.classList.add('visible');">
+                        <div class="about-photo-fallback" aria-hidden="true"><i data-lucide="user"></i></div>
                     </div>
-                    <div class="glass-card about-card" data-reveal data-delay="200">
-                        <div class="card-icon">
-                            <i data-lucide="globe"></i>
+                    <div class="about-text-block">
+                        <p class="about-summary">
+                            Second-year <strong>Computer Science and Systems Engineering</strong> undergraduate at LIET, maintaining a <strong>9.5 GPA</strong>. 
+                            My focus is <strong>Generative AI</strong> and <strong>Agentic AI</strong> — building systems where AI agents reason, use tools, and integrate cleanly with data and workflows. 
+                            I care about reliability, interpretability, and putting AI to work in production (SQL agents, AI-assisted analytics, OCR, and backend automation), not just demos.
+                        </p>
+                        <p class="about-summary about-summary-secondary">
+                            I also build robust backend systems, data pipelines, and web applications with Python and Django. 
+                            Long-term interests: ML systems, operating systems, and compiler internals. 
+                            As Vice-Chairperson of ACM and Editor-in-Chief of LWC, I value clarity in code and communication and enjoy mentoring.
+                        </p>
+                        <div class="about-cards">
+                            <div class="glass-card about-card about-card-ai" data-reveal data-delay="150">
+                                <div class="card-icon">
+                                    <i data-lucide="bot"></i>
+                                </div>
+                                <h3>Gen & Agentic AI</h3>
+                                <ul>
+                                    <li>LLM integration</li>
+                                    <li>Agents & tool use</li>
+                                    <li>RAG & prompts</li>
+                                </ul>
+                            </div>
+                            <div class="glass-card about-card" data-reveal data-delay="200">
+                                <div class="card-icon">
+                                    <i data-lucide="code"></i>
+                                </div>
+                                <h3>Backend & Data</h3>
+                                <ul>
+                                    <li>Python · Django</li>
+                                    <li>APIs · SQL</li>
+                                    <li>Data pipelines</li>
+                                </ul>
+                            </div>
+                            <div class="glass-card about-card" data-reveal data-delay="250">
+                                <div class="card-icon">
+                                    <i data-lucide="globe"></i>
+                                </div>
+                                <h3>Web & Systems</h3>
+                                <ul>
+                                    <li>HTML, CSS, JS</li>
+                                    <li>OCR · automation</li>
+                                    <li>REST · design</li>
+                                </ul>
+                            </div>
                         </div>
-                        <h3>Web Development</h3>
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>Django</li>
-                        </ul>
-                    </div>
-                    <div class="glass-card about-card" data-reveal data-delay="250">
-                        <div class="card-icon">
-                            <i data-lucide="cpu"></i>
-                        </div>
-                        <h3>Systems & Tools</h3>
-                        <ul>
-                            <li>Django</li>
-                            <li>OCR integration</li>
-                            <li>AI-based systems</li>
-                            <li>REST APIs</li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -141,7 +154,12 @@
     <section id="education" class="section">
         <div class="container">
             <h2 class="section-title" data-reveal>Education</h2>
-            <div class="education-grid" data-reveal data-delay="100">
+            <div class="education-layout" data-reveal data-delay="100">
+                <div class="education-photo-wrap">
+                    <img src="assets/images/education.jpg" alt="Campus / Education" class="education-photo" onerror="this.style.display='none'; var f=this.nextElementSibling; if(f) f.classList.add('visible');">
+                    <div class="education-photo-fallback" aria-hidden="true"><i data-lucide="graduation-cap"></i></div>
+                </div>
+                <div class="education-grid">
                 <div class="glass-card education-card">
                     <div class="education-icon">
                         <i data-lucide="graduation-cap"></i>
@@ -166,6 +184,7 @@
                     <p class="education-school">Sri Chaitanya Techno School, Palasa</p>
                     <p class="education-meta">Completed with Distinction</p>
                 </div>
+                </div>
             </div>
         </div>
     </section>
@@ -176,21 +195,35 @@
             <h2 class="section-title" data-reveal>Projects</h2>
             <p class="section-subtitle" data-reveal data-delay="50">A selection of academic, system-oriented, and applied software projects. More on <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener">GitHub</a>.</p>
             
-            <!-- Pinned / Featured from GitHub -->
-            <div class="projects-featured" data-reveal data-delay="100">
-                <h3 class="subsection-title">Featured on GitHub</h3>
-                <div class="projects-grid projects-grid-featured">
-                    <article class="glass-card project-card project-card-featured" data-reveal data-delay="100">
+            <!-- Gen AI & Agentic AI highlight -->
+            <div class="projects-ai-highlight" data-reveal data-delay="50">
+                <h3 class="subsection-title subsection-title-ai">
+                    <i data-lucide="sparkles"></i>
+                    Generative & Agentic AI
+                </h3>
+                <div class="project-card project-card-hero glass-card" data-reveal data-delay="100">
+                    <div class="project-hero-image-wrap">
+                        <img src="assets/images/sql-agent.jpg" alt="SQL Agent AI" class="project-hero-image" onerror="this.style.display='none'">
+                        <div class="project-hero-image-placeholder" aria-hidden="true"><i data-lucide="database"></i></div>
+                    </div>
+                    <div class="project-hero-content">
                         <div class="project-header">
                             <h3>sql-agent-ai</h3>
-                            <span class="project-badge">Python</span>
+                            <span class="project-badge project-badge-ai">Agentic AI</span>
                         </div>
-                        <p class="project-desc">AI-powered SQL agent for natural language to query workflows and data exploration.</p>
-                        <div class="project-tech"><span>Python</span><span>AI</span></div>
+                        <p class="project-desc">Natural-language to SQL via an <strong>AI agent</strong> that reasons, plans, and executes queries. Built with LLM integration, tool use, and structured outputs for reliable data exploration.</p>
+                        <div class="project-tech"><span>Python</span><span>LLM</span><span>Agents</span><span>SQL</span></div>
                         <div class="project-links">
                             <a href="https://github.com/sreeraj-patnaik/sql-agent-ai" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
                         </div>
-                    </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pinned / Featured from GitHub -->
+            <div class="projects-featured" data-reveal data-delay="100">
+                <h3 class="subsection-title">More on GitHub</h3>
+                <div class="projects-grid projects-grid-featured">
                     <article class="glass-card project-card project-card-featured" data-reveal data-delay="150">
                         <div class="project-header">
                             <h3>NetSense-Campus</h3>
@@ -381,41 +414,60 @@
     <section id="skills" class="section">
         <div class="container">
             <h2 class="section-title" data-reveal>Skills</h2>
-            <div class="skills-grid">
-                <div class="skills-category glass-card" data-reveal data-delay="100">
+            <p class="section-subtitle" data-reveal data-delay="50">A comprehensive overview of technologies and practices I work with.</p>
+            <div class="skills-grid skills-grid-wide">
+                <div class="skills-category glass-card skills-category-ai" data-reveal data-delay="100">
+                    <div class="skills-category-icon">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3>Generative & Agentic AI</h3>
+                    <div class="skills-tags">
+                        <span>LLMs</span><span>Prompt Engineering</span><span>RAG</span><span>AI Agents</span><span>Tool Use</span><span>Structured Outputs</span><span>OpenAI / API</span>
+                    </div>
+                </div>
+                <div class="skills-category glass-card" data-reveal data-delay="120">
                     <div class="skills-category-icon">
                         <i data-lucide="code-2"></i>
                     </div>
-                    <h3>Programming</h3>
+                    <h3>Programming & Core</h3>
                     <div class="skills-tags">
-                        <span>Python</span><span>C</span><span>Java</span><span>JavaScript</span><span>SQL</span>
+                        <span>Python</span><span>C</span><span>Java</span><span>JavaScript</span><span>SQL</span><span>Data Structures</span><span>Algorithms</span>
                     </div>
                 </div>
-                <div class="skills-category glass-card" data-reveal data-delay="150">
+                <div class="skills-category glass-card" data-reveal data-delay="140">
                     <div class="skills-category-icon">
                         <i data-lucide="layout"></i>
                     </div>
-                    <h3>Web Development</h3>
+                    <h3>Web & Backend</h3>
                     <div class="skills-tags">
-                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Django</span><span>REST APIs</span>
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Django</span><span>REST APIs</span><span>Bootstrap</span><span>Responsive UI</span>
+                    </div>
+                </div>
+                <div class="skills-category glass-card" data-reveal data-delay="160">
+                    <div class="skills-category-icon">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <h3>Data & Analytics</h3>
+                    <div class="skills-tags">
+                        <span>NumPy</span><span>Pandas</span><span>Matplotlib</span><span>Plotly</span><span>Data Analysis</span><span>ETL</span>
+                    </div>
+                </div>
+                <div class="skills-category glass-card" data-reveal data-delay="180">
+                    <div class="skills-category-icon">
+                        <i data-lucide="bot"></i>
+                    </div>
+                    <h3>ML & Applied AI</h3>
+                    <div class="skills-tags">
+                        <span>Applied ML</span><span>OCR</span><span>NLP basics</span><span>Model integration</span><span>Decision support</span>
                     </div>
                 </div>
                 <div class="skills-category glass-card" data-reveal data-delay="200">
                     <div class="skills-category-icon">
-                        <i data-lucide="brain"></i>
-                    </div>
-                    <h3>AI / Data</h3>
-                    <div class="skills-tags">
-                        <span>NumPy</span><span>Pandas</span><span>Data Analysis</span><span>Generative AI</span>
-                    </div>
-                </div>
-                <div class="skills-category glass-card" data-reveal data-delay="250">
-                    <div class="skills-category-icon">
                         <i data-lucide="wrench"></i>
                     </div>
-                    <h3>Tools</h3>
+                    <h3>Tools & Practices</h3>
                     <div class="skills-tags">
-                        <span>Git & GitHub</span><span>Linux & CLI</span><span>Figma</span><span>DSA</span>
+                        <span>Git & GitHub</span><span>Linux & CLI</span><span>Figma</span><span>UI/UX</span><span>Debugging</span><span>Documentation</span>
                     </div>
                 </div>
             </div>
