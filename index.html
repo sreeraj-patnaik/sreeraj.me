@@ -1,2 +1,485 @@
-<h1>Sreeraj Dabbiru</h1>
-<p>Personal developer website</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreeraj Dabbiru | Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Sreeraj Dabbiru — BTech Computer Science Student & Developer. Backend systems, data-driven software, Python, Django, AI.">
+    
+    <!-- Google Fonts: Syne (display) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="bg-gradient" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-orbs" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-2"></span>
+        <span class="orb orb-3"></span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">Sreeraj<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://sreeraj-patnaik.github.io/Portfolio/blog.html" target="_blank" rel="noopener">Blog</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <span class="hero-subtitle"><span class="hero-greeting-line"></span>Hello, I'm</span>
+            <h1 class="hero-title">
+                <span class="hero-name">Sreeraj Dabbiru</span>
+            </h1>
+            <p class="hero-tagline">BTech Computer Science Student · Developer</p>
+            <p class="hero-intro">
+                Computer Science undergraduate focused on <strong>backend systems</strong>, <strong>data-driven software</strong>, and applied problem solving. 
+                Building reliable software with Python, web technologies, and a growing interest in ML and systems. 
+                <span class="hero-meta">Vice-Chairperson, ACM Student Chapter · Editor-in-Chief, LWC · LIET ’28</span>
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i data-lucide="folder-git-2"></i>
+                    View Projects
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i data-lucide="mail"></i>
+                    Contact
+                </a>
+                <a href="https://sreeraj-patnaik.github.io/Portfolio/blog.html" target="_blank" rel="noopener" class="btn btn-ghost">
+                    <i data-lucide="book-open"></i>
+                    Blog
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat"><span class="stat-num" data-count="43">0</span> Repos</div>
+                <div class="hero-stat"><i data-lucide="award"></i> Pull Shark</div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i data-lucide="chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-reveal>About Me</h2>
+            <div class="about-wrapper" data-reveal data-delay="100">
+                <p class="about-summary">
+                    Second-year <strong>Computer Science and Systems Engineering</strong> undergraduate at Lendi Institute of Engineering and Technology (LIET), maintaining a <strong>9.5 GPA</strong>. 
+                    I focus on building reliable, maintainable software — from data models and workflows to backend systems and analytical tooling. 
+                    I value clarity in both code and communication, and enjoy mentoring and explaining systems honestly. 
+                    Interested in machine learning as a tool for integration and interpretability, and in operating systems and compiler internals long-term.
+                </p>
+                <div class="about-cards">
+                    <div class="glass-card about-card" data-reveal data-delay="150">
+                        <div class="card-icon">
+                            <i data-lucide="code"></i>
+                        </div>
+                        <h3>Programming</h3>
+                        <ul>
+                            <li>C</li>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card about-card" data-reveal data-delay="200">
+                        <div class="card-icon">
+                            <i data-lucide="globe"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Django</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card about-card" data-reveal data-delay="250">
+                        <div class="card-icon">
+                            <i data-lucide="cpu"></i>
+                        </div>
+                        <h3>Systems & Tools</h3>
+                        <ul>
+                            <li>Django</li>
+                            <li>OCR integration</li>
+                            <li>AI-based systems</li>
+                            <li>REST APIs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title" data-reveal>Education</h2>
+            <div class="education-grid" data-reveal data-delay="100">
+                <div class="glass-card education-card">
+                    <div class="education-icon">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <h3>B.Tech — Computer Science and Systems Engineering</h3>
+                    <p class="education-school">Lendi Institute of Engineering and Technology (LIET)</p>
+                    <p class="education-meta">2024 – 2028 · Ongoing</p>
+                </div>
+                <div class="glass-card education-card education-card-minor">
+                    <div class="education-icon">
+                        <i data-lucide="book-open"></i>
+                    </div>
+                    <h3>Intermediate</h3>
+                    <p class="education-school">Sri Chaitanya Jr College</p>
+                    <p class="education-meta">Completed with Distinction</p>
+                </div>
+                <div class="glass-card education-card education-card-minor">
+                    <div class="education-icon">
+                        <i data-lucide="school"></i>
+                    </div>
+                    <h3>SSC</h3>
+                    <p class="education-school">Sri Chaitanya Techno School, Palasa</p>
+                    <p class="education-meta">Completed with Distinction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title" data-reveal>Projects</h2>
+            <p class="section-subtitle" data-reveal data-delay="50">A selection of academic, system-oriented, and applied software projects. More on <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener">GitHub</a>.</p>
+            
+            <!-- Pinned / Featured from GitHub -->
+            <div class="projects-featured" data-reveal data-delay="100">
+                <h3 class="subsection-title">Featured on GitHub</h3>
+                <div class="projects-grid projects-grid-featured">
+                    <article class="glass-card project-card project-card-featured" data-reveal data-delay="100">
+                        <div class="project-header">
+                            <h3>sql-agent-ai</h3>
+                            <span class="project-badge">Python</span>
+                        </div>
+                        <p class="project-desc">AI-powered SQL agent for natural language to query workflows and data exploration.</p>
+                        <div class="project-tech"><span>Python</span><span>AI</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/sreeraj-patnaik/sql-agent-ai" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
+                        </div>
+                    </article>
+                    <article class="glass-card project-card project-card-featured" data-reveal data-delay="150">
+                        <div class="project-header">
+                            <h3>NetSense-Campus</h3>
+                            <span class="project-badge">Python</span>
+                        </div>
+                        <p class="project-desc">Campus network sensing and monitoring tooling for connectivity and analytics.</p>
+                        <div class="project-tech"><span>Python</span><span>Networking</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/sreeraj-patnaik/NetSense-Campus" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
+                        </div>
+                    </article>
+                    <article class="glass-card project-card project-card-featured" data-reveal data-delay="200">
+                        <div class="project-header">
+                            <h3>TeachPad</h3>
+                            <span class="project-badge">JavaScript</span>
+                        </div>
+                        <p class="project-desc">Teaching and learning platform with structured content and collaboration features.</p>
+                        <div class="project-tech"><span>JavaScript</span><span>Web</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/sreeraj-patnaik/TeachPad" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
+                        </div>
+                    </article>
+                    <article class="glass-card project-card project-card-featured" data-reveal data-delay="250">
+                        <div class="project-header">
+                            <h3>vidura</h3>
+                            <span class="project-badge">CSS</span>
+                        </div>
+                        <p class="project-desc">Contribution to vidura — design system and front-end components.</p>
+                        <div class="project-tech"><span>CSS</span><span>Design</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/sreeraj-patnaik/vidura" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <h3 class="subsection-title" data-reveal data-delay="50">More Projects</h3>
+            <div class="projects-grid">
+                <article class="glass-card project-card" data-reveal data-delay="100">
+                    <div class="project-header">
+                        <h3>Aarogya Health Command</h3>
+                        <span class="project-badge">Health Tech</span>
+                    </div>
+                    <p class="project-desc">Health management and monitoring system integrating data analysis and structured workflows for better healthcare decision support.</p>
+                    <div class="project-tech"><span>Python</span><span>Django</span><span>Data Analysis</span></div>
+                    <div class="project-links">
+                        <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
+                    </div>
+                </article>
+                <article class="glass-card project-card" data-reveal data-delay="150">
+                    <div class="project-header">
+                        <h3>ClearoRx</h3>
+                        <span class="project-badge">Utility</span>
+                    </div>
+                    <p class="project-desc">Prescription and medication clarity tool — OCR integration and structured data handling to make medical information accessible and actionable.</p>
+                    <div class="project-tech"><span>Python</span><span>OCR</span><span>Web</span></div>
+                    <div class="project-links">
+                        <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
+                    </div>
+                </article>
+                <article class="glass-card project-card" data-reveal data-delay="200">
+                    <div class="project-header">
+                        <h3>MAPSS</h3>
+                        <span class="project-badge">Smart India Hackathon</span>
+                    </div>
+                    <p class="project-desc">Mental and Psychological Student Support System — data analysis and AI-assisted insights to monitor and support student well-being at scale.</p>
+                    <div class="project-tech"><span>Python</span><span>Data Analysis</span><span>AI</span></div>
+                    <div class="project-links">
+                        <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
+                    </div>
+                </article>
+                <article class="glass-card project-card" data-reveal data-delay="250">
+                    <div class="project-header">
+                        <h3>Quantum Backend Analytics Dashboard</h3>
+                        <span class="project-badge">Amaravati Quantum Valley Hackathon</span>
+                    </div>
+                    <p class="project-desc">Dashboard aggregating IBM Quantum backend metadata — API scraping, execution logs, and quantitative metrics to rank optimal quantum backends.</p>
+                    <div class="project-tech"><span>Python</span><span>API</span><span>Data Engineering</span></div>
+                    <div class="project-links">
+                        <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
+                    </div>
+                </article>
+                <article class="glass-card project-card" data-reveal data-delay="300">
+                    <div class="project-header">
+                        <h3>Campus LMS</h3>
+                        <span class="project-badge">Academic</span>
+                    </div>
+                    <p class="project-desc">Campus-oriented Learning Management System with course materials, announcements, structured content delivery, and role-based academic workflows.</p>
+                    <div class="project-tech"><span>Django</span><span>Backend</span><span>RBAC</span></div>
+                    <div class="project-links">
+                        <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
+                    </div>
+                </article>
+                <article class="glass-card project-card" data-reveal data-delay="350">
+                    <div class="project-header">
+                        <h3>Exam Management System</h3>
+                        <span class="project-badge">Academic</span>
+                    </div>
+                    <p class="project-desc">Structured system for examinations, evaluations, and academic records with consistent data integrity and institutional workflows.</p>
+                    <div class="project-tech"><span>Python</span><span>Database</span><span>Automation</span></div>
+                    <div class="project-links">
+                        <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements / Leadership Section -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <h2 class="section-title" data-reveal>Achievements & Leadership</h2>
+            <div class="timeline" data-reveal data-delay="100">
+                <div class="timeline-item glass-card" data-reveal data-delay="100">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Vice Chairperson – ACM Student Chapter</h3>
+                        <p>Leading technical initiatives and fostering a culture of systems thinking and meaningful engineering at LIET.</p>
+                    </div>
+                </div>
+                <div class="timeline-item glass-card" data-reveal data-delay="150">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Editor-in-Chief – LWC</h3>
+                        <p>Lendi Write Club — driving clarity of thought, communication, and the first newsletter and editorial standards.</p>
+                    </div>
+                </div>
+                <div class="timeline-item glass-card" data-reveal data-delay="200">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>HackTriad Participation</h3>
+                        <p>Competed in HackTriad with a focus on practical, deployable solutions and team collaboration.</p>
+                    </div>
+                </div>
+                <div class="timeline-item glass-card" data-reveal data-delay="250">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Yuva Utsav Poetry Winner</h3>
+                        <p>First place in District-level Poetry Competition (Yuva Utsav) — balancing logic and expression.</p>
+                    </div>
+                </div>
+                <div class="timeline-item glass-card" data-reveal data-delay="300">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Class Representative</h3>
+                        <p>Representing cohort interests and facilitating communication between students and faculty.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title" data-reveal>Certifications</h2>
+            <div class="cert-grid">
+                <a href="https://www.linkedin.com/in/sreeraj-patnaik-dabbiru-65bb28262/details/certifications/" target="_blank" rel="noopener" class="glass-card cert-card" data-reveal data-delay="100">
+                    <i data-lucide="certificate"></i>
+                    <h3>Introduction to Data Science</h3>
+                    <p>Infosys Springboard</p>
+                </a>
+                <div class="glass-card cert-card" data-reveal data-delay="150">
+                    <i data-lucide="certificate"></i>
+                    <h3>Java Full Stack with React JS & AI</h3>
+                    <p>NSTTP-2K24 · LIET × Brainovision × AICTE</p>
+                </div>
+                <a href="https://www.linkedin.com/in/sreeraj-patnaik-dabbiru-65bb28262/details/certifications/" target="_blank" rel="noopener" class="glass-card cert-card" data-reveal data-delay="200">
+                    <i data-lucide="certificate"></i>
+                    <h3>Web Full Stack Developer Virtual Internship</h3>
+                    <p>EduSkills × AICTE</p>
+                </a>
+                <a href="https://www.linkedin.com/in/sreeraj-patnaik-dabbiru-65bb28262/details/certifications/" target="_blank" rel="noopener" class="glass-card cert-card" data-reveal data-delay="250">
+                    <i data-lucide="certificate"></i>
+                    <h3>Cyber Security Virtual Internship</h3>
+                    <p>Palo Alto Networks × EduSkills × AICTE</p>
+                </a>
+                <div class="glass-card cert-card" data-reveal data-delay="300">
+                    <i data-lucide="award"></i>
+                    <h3>District Level Poetry Competition</h3>
+                    <p>First place · SETWEZ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title" data-reveal>Skills</h2>
+            <div class="skills-grid">
+                <div class="skills-category glass-card" data-reveal data-delay="100">
+                    <div class="skills-category-icon">
+                        <i data-lucide="code-2"></i>
+                    </div>
+                    <h3>Programming</h3>
+                    <div class="skills-tags">
+                        <span>Python</span><span>C</span><span>Java</span><span>JavaScript</span><span>SQL</span>
+                    </div>
+                </div>
+                <div class="skills-category glass-card" data-reveal data-delay="150">
+                    <div class="skills-category-icon">
+                        <i data-lucide="layout"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <div class="skills-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Django</span><span>REST APIs</span>
+                    </div>
+                </div>
+                <div class="skills-category glass-card" data-reveal data-delay="200">
+                    <div class="skills-category-icon">
+                        <i data-lucide="brain"></i>
+                    </div>
+                    <h3>AI / Data</h3>
+                    <div class="skills-tags">
+                        <span>NumPy</span><span>Pandas</span><span>Data Analysis</span><span>Generative AI</span>
+                    </div>
+                </div>
+                <div class="skills-category glass-card" data-reveal data-delay="250">
+                    <div class="skills-category-icon">
+                        <i data-lucide="wrench"></i>
+                    </div>
+                    <h3>Tools</h3>
+                    <div class="skills-tags">
+                        <span>Git & GitHub</span><span>Linux & CLI</span><span>Figma</span><span>DSA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title" data-reveal>Get In Touch</h2>
+            <p class="section-subtitle contact-subtitle" data-reveal data-delay="50">Open to opportunities, collaborations, and meaningful conversations. Based in Visakhapatnam, India.</p>
+            <div class="contact-wrapper" data-reveal data-delay="100">
+                <div class="contact-info glass-card">
+                    <a href="mailto:sreerajdabbiru@gmail.com" class="contact-item">
+                        <i data-lucide="mail"></i>
+                        <span>sreerajdabbiru@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener" class="contact-item">
+                        <i data-lucide="github"></i>
+                        <span>GitHub · @sreeraj-patnaik</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sreeraj-patnaik-dabbiru-65bb28262/" target="_blank" rel="noopener" class="contact-item">
+                        <i data-lucide="linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <div class="contact-item contact-item-static">
+                        <i data-lucide="map-pin"></i>
+                        <span>Visakhapatnam, India</span>
+                    </div>
+                </div>
+                <form class="contact-form glass-card" id="contactForm" aria-label="Contact form (UI only)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; <span id="year"></span> Sreeraj Dabbiru. Built with care.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    <a href="https://www.linkedin.com/in/sreeraj-patnaik-dabbiru-65bb28262/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="mailto:sreerajdabbiru@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
