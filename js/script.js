@@ -35,25 +35,34 @@
 
   // --- Mobile nav toggle ---
   const navToggle = document.getElementById('navToggle');
-  const navLinks = document.querySelector('.nav-links');
+  const navLinks = document.getElementById('navLinks');
   if (navToggle && navLinks) {
-    navToggle.addEventListener('click', function () {
-      navLinks.classList.toggle('open');
+    function setNavState(open) {
+      navLinks.classList.toggle('open', open);
+      navLinks.setAttribute('aria-hidden', String(!open));
+      navToggle.setAttribute('aria-expanded', String(open));
       const icon = navToggle.querySelector('[data-lucide]');
       if (icon) {
-        icon.setAttribute('data-lucide', navLinks.classList.contains('open') ? 'x' : 'menu');
+        icon.setAttribute('data-lucide', open ? 'x' : 'menu');
         initIcons();
       }
+    }
+
+    navToggle.addEventListener('click', function () {
+      setNavState(!navLinks.classList.contains('open'));
     });
+
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
-        navLinks.classList.remove('open');
-        const icon = navToggle.querySelector('[data-lucide]');
-        if (icon) {
-          icon.setAttribute('data-lucide', 'menu');
-          initIcons();
-        }
+        setNavState(false);
       });
+    });
+
+    // Close nav when focus leaves the menu (keyboard/mobile)
+    navLinks.addEventListener('focusout', function (event) {
+      if (!navLinks.contains(event.relatedTarget)) {
+        setNavState(false);
+      }
     });
   }
 
@@ -127,6 +136,52 @@
     }, { threshold: 0.5 });
 
     counterObserver.observe(statNum.closest('.hero') || document.body);
+  }
+
+  // --- Active nav link highlighting ---
+  const sections = document.querySelectorAll('main section[id]');
+  const navLinksList = Array.from(document.querySelectorAll('.nav-links a'));
+  if (sections.length && navLinksList.length) {
+    const sectionObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navLinksList.forEach(function (link) {
+              if (link.getAttribute('href') === `#${id}`) {
+                link.setAttribute('aria-current', 'page');
+              } else {
+                link.removeAttribute('aria-current');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-40% 0px -55% 0px', threshold: 0 }
+    );
+
+    sections.forEach(function (section) {
+      sectionObserver.observe(section);
+    });
+  }
+
+  // --- Scroll-to-top button ---
+  const scrollTopBtn = document.querySelector('.scroll-to-top');
+  if (scrollTopBtn) {
+    function updateScrollTopVisibility() {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    }
+
+    scrollTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', updateScrollTopVisibility, { passive: true });
+    updateScrollTopVisibility();
   }
 
   // --- Contact form: UI only ---

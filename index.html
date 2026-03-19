@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <!-- Animated background -->
     <div class="bg-gradient" aria-hidden="true"></div>
     <div class="bg-grid" aria-hidden="true"></div>
@@ -26,11 +28,12 @@
         <span class="orb orb-3"></span>
     </div>
 
+    <header class="site-header" role="banner">
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#hero" class="logo">Sreeraj<span>.</span></a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks" aria-hidden="false">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
@@ -41,56 +44,63 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="https://sreeraj-patnaik.github.io/Portfolio/blog.html" target="_blank" rel="noopener">Blog</a></li>
             </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
                 <i data-lucide="menu"></i>
             </button>
         </div>
     </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="container hero-content">
-            <div class="hero-photo-wrap" data-reveal>
-                <img src="assets/images/me.jpeg" alt="Sreeraj Dabbiru" class="hero-photo" onerror="this.style.display='none'; var f=this.nextElementSibling; if(f) f.classList.add('visible');">
-                <div class="hero-photo-fallback" aria-hidden="true">SD</div>
+        <div class="container hero-inner">
+            <div class="hero-left" data-reveal>
+                <div class="hero-photo-wrap">
+                    <img src="assets/images/me.jpeg" alt="Sreeraj Dabbiru" class="hero-photo" onerror="this.style.display='none'; var f=this.nextElementSibling; if(f) f.classList.add('visible');">
+                    <div class="hero-photo-fallback" aria-hidden="true">SD</div>
+                </div>
             </div>
-            <span class="hero-subtitle"><span class="hero-greeting-line"></span>Hello, I'm</span>
-            <h1 class="hero-title">
-                <span class="hero-name">Sreeraj Dabbiru</span>
-            </h1>
-            <p class="hero-tagline">
-                BTech Computer Science · Developer · <span class="hero-tagline-ai">AI, Systems & Backend Engineering</span>
-            </p>
-            
-            <p class="hero-intro">
-                Building <strong>intelligent and reliable software systems</strong> — from <strong>AI-assisted applications and data pipelines</strong> to 
-                <strong>backend architectures and automation tools</strong>. My interests span <strong>Generative AI, machine learning systems, and core computer science</strong> including operating systems and compilers.
-                I focus on designing systems that integrate cleanly with data, scale effectively, and solve real problems.
-                <span class="hero-meta">Technical Co-Lead, GfG LIET · Editor-in-Chief, LWC · LIET ’28</span>
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">
-                    <i data-lucide="folder-git-2"></i>
-                    View Projects
-                </a>
-                <a href="#contact" class="btn btn-outline">
-                    <i data-lucide="mail"></i>
-                    Contact
-                </a>
-                <a href="https://sreeraj-patnaik.github.io/Portfolio/blog.html" target="_blank" rel="noopener" class="btn btn-ghost">
-                    <i data-lucide="book-open"></i>
-                    Blog
-                </a>
-            </div>
-            <div class="hero-stats">
-                <div class="hero-stat"><span class="stat-num" data-count="43">0</span> Repos</div>
-                <div class="hero-stat"><i data-lucide="award"></i> Pull Shark</div>
+            <div class="hero-right" data-reveal>
+                <span class="hero-subtitle"><span class="hero-greeting-line"></span>Hello, I'm</span>
+                <h1 class="hero-title">
+                    <span class="hero-name">Sreeraj Dabbiru</span>
+                </h1>
+                <p class="hero-tagline">
+                    BTech Computer Science · Developer · <span class="hero-tagline-ai">AI, Systems & Backend Engineering</span>
+                </p>
+                
+                <p class="hero-intro">
+                    Building <strong>intelligent and reliable software systems</strong> — from <strong>AI-assisted applications and data pipelines</strong> to 
+                    <strong>backend architectures and automation tools</strong>. My interests span <strong>Generative AI, machine learning systems, and core computer science</strong> including operating systems and compilers.
+                    I focus on designing systems that integrate cleanly with data, scale effectively, and solve real problems.
+                    <span class="hero-meta">Technical Co-Lead, GfG LIET · Editor-in-Chief, LWC · LIET ’28</span>
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i data-lucide="folder-git-2"></i>
+                        View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i data-lucide="mail"></i>
+                        Contact
+                    </a>
+                    <a href="https://sreeraj-patnaik.github.io/Portfolio/blog.html" target="_blank" rel="noopener" class="btn btn-ghost">
+                        <i data-lucide="book-open"></i>
+                        Blog
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat"><span class="stat-num" data-count="43">0</span> Repos</div>
+                    <div class="hero-stat"><i data-lucide="award"></i> Pull Shark</div>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator">
             <i data-lucide="chevron-down"></i>
         </div>
     </section>
+
+    <main id="main" role="main">
 
     <!-- About Section -->
     <section id="about" class="section">
@@ -313,38 +323,49 @@
             <h2 class="section-title" data-reveal>Projects</h2>
             <p class="section-subtitle" data-reveal data-delay="50">A selection of academic, system-oriented, and applied software projects. More on <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener">GitHub</a>.</p>
             
-            <!-- Gen AI & Agentic AI highlight -->
+            <!-- Featured projects -->
             <div class="projects-ai-highlight" data-reveal data-delay="50">
                 <h3 class="subsection-title subsection-title-ai">
                     <i data-lucide="sparkles"></i>
-                    Generative & Agentic AI
+                    Featured Projects
                 </h3>
                 <div class="project-card project-card-hero glass-card" data-reveal data-delay="100">
                     <div class="project-hero-image-wrap">
-                        <img src="assets/images/sql-agent.jpg" alt="SQL Agent AI" class="project-hero-image" onerror="this.style.display='none'">
+                        <img src="assets/images/sql-agent.jpg" alt="KnowItRx" class="project-hero-image" onerror="this.style.display='none'">
                         <div class="project-hero-image-placeholder" aria-hidden="true"><i data-lucide="database"></i></div>
                     </div>
                     <div class="project-hero-content">
                         <div class="project-header">
-                            <h3>sql-agent-ai</h3>
-                            <span class="project-badge project-badge-ai">Agentic AI</span>
+                            <h3>KnowItRx</h3>
+                            <span class="project-badge project-badge-ai">Utility</span>
+                        </div>
+                        <p class="project-desc">Prescription and medication clarity tool — OCR integration and structured data handling to make medical information accessible and actionable.</p>
+                        <div class="project-tech"><span>Python</span><span>OCR</span><span>Web</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All projects (merged) -->
+            <div class="projects-featured" data-reveal data-delay="100">
+                <h3 class="subsection-title">More Projects</h3>
+                <div class="projects-grid projects-grid-featured">
+                    <article class="glass-card project-card project-card-featured" data-reveal data-delay="150">
+                        <div class="project-header">
+                            <h3>NL SQL Chatter View</h3>
+                            <span class="project-badge">Agentic AI</span>
                         </div>
                         <p class="project-desc">Natural-language to SQL via an <strong>AI agent</strong> that reasons, plans, and executes queries. Built with LLM integration, tool use, and structured outputs for reliable data exploration.</p>
                         <div class="project-tech"><span>Python</span><span>LLM</span><span>Agents</span><span>SQL</span></div>
                         <div class="project-links">
                             <a href="https://github.com/sreeraj-patnaik/sql-agent-ai" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pinned / Featured from GitHub -->
-            <div class="projects-featured" data-reveal data-delay="100">
-                <h3 class="subsection-title">More on GitHub</h3>
-                <div class="projects-grid projects-grid-featured">
-                    <article class="glass-card project-card project-card-featured" data-reveal data-delay="150">
+                    </article>
+                    <article class="glass-card project-card project-card-featured" data-reveal data-delay="180">
                         <div class="project-header">
-                            <h3>NetSense-Campus</h3>
+                            <h3>NetSense Campus</h3>
                             <span class="project-badge">Python</span>
                         </div>
                         <p class="project-desc">Campus network sensing and monitoring tooling for connectivity and analytics.</p>
@@ -353,69 +374,51 @@
                             <a href="https://github.com/sreeraj-patnaik/NetSense-Campus" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
                         </div>
                     </article>
-                    <article class="glass-card project-card project-card-featured" data-reveal data-delay="200">
+                    <article class="glass-card project-card project-card-featured" data-reveal data-delay="210">
                         <div class="project-header">
                             <h3>TeachPad</h3>
                             <span class="project-badge">JavaScript</span>
                         </div>
-                        <p class="project-desc">Teaching and learning platform with structured content and collaboration features.</p>
+                        <p class="project-desc">Live realtime drawing board with pan/zoom for mobile and full-screen learner display — a low-cost alternative to graphics tablets, plus structured content and collaboration.</p>
                         <div class="project-tech"><span>JavaScript</span><span>Web</span></div>
                         <div class="project-links">
                             <a href="https://github.com/sreeraj-patnaik/TeachPad" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
                         </div>
                     </article>
-                    <article class="glass-card project-card project-card-featured" data-reveal data-delay="250">
+                    <article class="glass-card project-card project-card-featured" data-reveal data-delay="240">
                         <div class="project-header">
                             <h3>vidura</h3>
                             <span class="project-badge">CSS</span>
                         </div>
-                        <p class="project-desc">Contribution to vidura — design system and front-end components.</p>
+                        <p class="project-desc">Designed department website Vidura — UI components and design system for a polished, responsive experience.</p>
                         <div class="project-tech"><span>CSS</span><span>Design</span></div>
                         <div class="project-links">
                             <a href="https://github.com/sreeraj-patnaik/vidura" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
                         </div>
                     </article>
+                    <article class="glass-card project-card project-card-featured" data-reveal data-delay="270">
+                        <div class="project-header">
+                            <h3>MAPSS</h3>
+                            <span class="project-badge">Smart India Hackathon</span>
+                        </div>
+                        <p class="project-desc">Mental and Psychological Student Support System — data analysis and AI-assisted insights to monitor and support student well-being at scale.</p>
+                        <div class="project-tech"><span>Python</span><span>Data Analysis</span><span>AI</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
+                        </div>
+                    </article>
+                    <article class="glass-card project-card project-card-featured" data-reveal data-delay="300">
+                        <div class="project-header">
+                            <h3>Quantum Backend Analytics Dashboard</h3>
+                            <span class="project-badge">Amaravati Quantum Valley Hackathon</span>
+                        </div>
+                        <p class="project-desc">Dashboard aggregating IBM Quantum backend metadata — API scraping, execution logs, and quantitative metrics to rank optimal quantum backends.</p>
+                        <div class="project-tech"><span>Python</span><span>API</span><span>Data Engineering</span></div>
+                        <div class="project-links">
+                            <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
+                        </div>
+                    </article>
                 </div>
-            </div>
-
-            <h3 class="subsection-title" data-reveal data-delay="50">More Projects</h3>
-            <div class="projects-grid">
-               
-                <article class="glass-card project-card" data-reveal data-delay="150">
-                    <div class="project-header">
-                        <h3>ClearoRx</h3>
-                        <span class="project-badge">Utility</span>
-                    </div>
-                    <p class="project-desc">Prescription and medication clarity tool — OCR integration and structured data handling to make medical information accessible and actionable.</p>
-                    <div class="project-tech"><span>Python</span><span>OCR</span><span>Web</span></div>
-                    <div class="project-links">
-                        <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
-                    </div>
-                </article>
-                <article class="glass-card project-card" data-reveal data-delay="200">
-                    <div class="project-header">
-                        <h3>MAPSS</h3>
-                        <span class="project-badge">Smart India Hackathon</span>
-                    </div>
-                    <p class="project-desc">Mental and Psychological Student Support System — data analysis and AI-assisted insights to monitor and support student well-being at scale.</p>
-                    <div class="project-tech"><span>Python</span><span>Data Analysis</span><span>AI</span></div>
-                    <div class="project-links">
-                        <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
-                    </div>
-                </article>
-                <article class="glass-card project-card" data-reveal data-delay="250">
-                    <div class="project-header">
-                        <h3>Quantum Backend Analytics Dashboard</h3>
-                        <span class="project-badge">Amaravati Quantum Valley Hackathon</span>
-                    </div>
-                    <p class="project-desc">Dashboard aggregating IBM Quantum backend metadata — API scraping, execution logs, and quantitative metrics to rank optimal quantum backends.</p>
-                    <div class="project-tech"><span>Python</span><span>API</span><span>Data Engineering</span></div>
-                    <div class="project-links">
-                        <a href="https://github.com/sreeraj-patnaik" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i> Code</a>
-                    </div>
-                </article>
-               
-             
             </div>
         </div>
     </section>
@@ -534,7 +537,7 @@
                 </form>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -550,6 +553,9 @@
         </div>
     </footer>
 
+    <button class="scroll-to-top" aria-label="Scroll to top" type="button">
+        <i data-lucide="chevrons-up"></i>
+    </button>
     <script src="js/script.js"></script>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
